@@ -1,0 +1,382 @@
+@charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas: "header" "main" "footer";
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  border-bottom: 1px solid black;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1rem;
+  font-size: 18px;
+}
+
+header nav .logo {
+  width: 60px;
+}
+
+header nav .logo a {
+  height: inherit;
+}
+
+header nav .logo a img {
+  height: inherit;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header nav ul li {
+  color: black;
+  list-style: none;
+  font-weight: 600;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header nav ul li:hover {
+  color: #AA1519;
+}
+
+header nav ul li a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+header nav ul li a:hover {
+  --p: 100%;
+}
+
+header nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #AA1519)) calc(100% - var(--p,0%))/var(--p, 0%) no-repeat;
+  background: linear-gradient(#AA1519 0 0) calc(100% - var(--p,0%))/var(--p, 0%) no-repeat;
+  -webkit-transition: 0.2s, background-position 0s;
+  transition: 0.2s, background-position 0s;
+}
+
+header nav .login a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 1px solid black;
+  background-color: #ffffff;
+  font-weight: 600;
+}
+
+header nav .login a:hover {
+  background-color: #AA1519;
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+footer .underbar {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  height: 30px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  gap: 2rem;
+}
+
+footer .underbar::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
+}
+
+footer .underbar p {
+  color: #ffffff;
+}
+
+footer .underbar a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer .underbar a:hover {
+  color: #AA1519;
+}
+
+.loginbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 450px;
+  gap: .1rem;
+}
+
+.loginbox input {
+  margin: 0 0 1rem 0;
+  padding: 0.3rem;
+}
+
+.loginbox label {
+  font-weight: 500;
+}
+
+.loginbox div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.loginbox div button {
+  padding: 0.5rem;
+  border: 1px solid black;
+  -webkit-transform: all 7s;
+          transform: all 7s;
+  font-weight: 500;
+}
+
+.loginbox div button:last-child {
+  background-color: #AA1519;
+}
+
+.loginbox div button:last-child:hover {
+  -webkit-filter: hue-rotate(-85deg);
+          filter: hue-rotate(-85deg);
+  -webkit-transform: all .7s;
+          transform: all .7s;
+}
+
+.loginbox a {
+  margin: 1rem 0 0 0;
+}
+
+.Errorpage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.Errorpage img {
+  width: 100%;
+  max-width: 650px;
+}
+
+.Errorpage h2 span {
+  background-color: black;
+  color: #fff;
+  padding: 0 0.2rem;
+}
+
+.Errorpage div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Errorpage div a {
+  background-color: #ffffff;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding: 0.2rem 0;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.Errorpage div a:hover {
+  --p: 100%;
+}
+
+.Errorpage div a:hover i {
+  color: black;
+}
+
+.Errorpage div a:hover i::before {
+  content: "";
+}
+
+.Errorpage div a:first-child i {
+  padding: 0 0 0 .4rem;
+}
+
+.Errorpage div a:first-child:hover {
+  --p: 100%;
+}
+
+.Errorpage div a:first-child:hover i {
+  padding: 0;
+  color: black;
+}
+
+.Errorpage div a:first-child:hover i::before {
+  content: "";
+}
+
+.Errorpage div a::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #AA1519)) calc(100% - var(--p,0%))/var(--p, 0%) no-repeat;
+  background: linear-gradient(#AA1519 0 0) calc(100% - var(--p,0%))/var(--p, 0%) no-repeat;
+  -webkit-transition: 0.4s, background-position 0s;
+  transition: 0.4s, background-position 0s;
+}
+
+.Errorpage div a::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #AA1519)) var(--p, 0%)/var(--p, 0%) no-repeat;
+  background: linear-gradient(#AA1519 0 0) var(--p, 0%)/var(--p, 0%) no-repeat;
+  -webkit-transition: 0.4s, background-position 0s;
+  transition: 0.4s, background-position 0s;
+}
+
+.Errorpage div a i {
+  color: #AA1519;
+  font-weight: 600;
+}
+
+.webtools section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  margin: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.webtools section article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 350px;
+  gap: 1rem;
+  -webkit-box-shadow: 0 0 13px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 13px rgba(0, 0, 0, 0.6);
+}
+
+.webtools section article img {
+  width: 100%;
+  min-height: 200px;
+  padding: .5rem;
+  background-color: black;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.webtools section article img:hover {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.webtools section article h3, .webtools section article p {
+  margin: 0 0.5rem;
+}
+
+.webtools section article h3 span, .webtools section article p span {
+  color: #AA1519;
+}
+
+.webtools section article a {
+  border-top: 1px solid black;
+  padding: 0.5rem;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+
+.webtools section article a:hover {
+  background-color: #AA1519;
+}
+/*# sourceMappingURL=style.css.map */
