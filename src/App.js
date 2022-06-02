@@ -1,9 +1,9 @@
-import './style.css';
+import './Assets/css/style.css';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home';
-import ErrorPage from './Pages/ErrorPage'
-import WebTools from './Pages/WebTools'
-import About from './Pages/about'
+import Home from './Pages/Home/Home';
+import ErrorPage from './Pages/ErrorPage/ErrorPage'
+import WebTools from './Pages/WebTools/WebTools'
+import About from './Pages/About/About'
 function App() {
     return (
         <Router>

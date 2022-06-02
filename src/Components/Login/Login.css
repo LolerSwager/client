@@ -1,0 +1,52 @@
+.loginbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 450px;
+  gap: .1rem;
+}
+
+.loginbox input {
+  margin: 0 0 1rem 0;
+  padding: 0.3rem;
+}
+
+.loginbox label {
+  font-weight: 500;
+}
+
+.loginbox div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.loginbox div button {
+  padding: 0.5rem;
+  border: 1px solid black;
+  -webkit-transform: all 7s;
+          transform: all 7s;
+  font-weight: 500;
+}
+
+.loginbox div button:last-child {
+  background-color: #AA1519;
+}
+
+.loginbox div button:last-child:hover {
+  -webkit-filter: hue-rotate(-85deg);
+          filter: hue-rotate(-85deg);
+  -webkit-transform: all .7s;
+          transform: all .7s;
+}
+
+.loginbox a {
+  margin: 1rem 0 0 0;
+}
+/*# sourceMappingURL=Login.css.map */

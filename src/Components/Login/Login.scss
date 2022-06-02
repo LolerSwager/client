@@ -1,0 +1,36 @@
+$active-color: #AA1519;
+
+.loginbox{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    gap: .1rem;
+    input{
+        margin: 0 0 1rem 0;
+        padding: 0.3rem;
+    }
+    label{
+        font-weight: 500;
+    }
+    div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        button{
+            padding: 0.5rem;
+            border: 1px solid black;
+            transform: all 7s;
+            font-weight: 500;
+            &:last-child{
+                background-color: $active-color;
+                &:hover{
+                    filter: hue-rotate(-85deg); //#41BCA1
+                    transform: all .7s;
+                }
+            }
+        }
+    }
+    a{
+        margin: 1rem 0 0 0;
+    }
+}

@@ -1,0 +1,103 @@
+header {
+  grid-area: header;
+  border-bottom: 1px solid black;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1rem;
+  font-size: 18px;
+}
+
+header nav .logo {
+  width: 60px;
+}
+
+header nav .logo a {
+  height: inherit;
+}
+
+header nav .logo a img {
+  height: inherit;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header nav ul li {
+  color: black;
+  list-style: none;
+  font-weight: 600;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header nav ul li:hover {
+  color: #AA1519;
+}
+
+header nav ul li a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+header nav ul li a:hover {
+  --p: 100%;
+}
+
+header nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #AA1519)) calc(100% - var(--p,0%))/var(--p, 0%) no-repeat;
+  background: linear-gradient(#AA1519 0 0) calc(100% - var(--p,0%))/var(--p, 0%) no-repeat;
+  -webkit-transition: 0.2s, background-position 0s;
+  transition: 0.2s, background-position 0s;
+}
+
+header nav .login a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 1px solid black;
+  background-color: #ffffff;
+  font-weight: 600;
+}
+
+header nav .login a:hover {
+  background-color: #AA1519;
+}
+
+@media only screen and (max-width: 49.5em) {
+  header nav ul {
+    display: block;
+  }
+  header nav ul li {
+    margin: 1rem;
+  }
+  header nav ul li a {
+    /*
+                        &:first-child{
+                            i{
+                                display: none;
+                            } 
+                        }
+                        */
+  }
+}
+/*# sourceMappingURL=Header.css.map */

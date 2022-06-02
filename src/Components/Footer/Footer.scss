@@ -1,0 +1,32 @@
+$active-color: #AA1519;
+
+footer{
+    .underbar{
+        grid-area: footer;
+        height: 30px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
+        }
+        gap: 2rem;
+        p{
+            color: #ffffff;
+        }
+        a{
+            color: #ffffff;
+            text-decoration: none;
+            &:hover{
+                color: $active-color;
+            }
+        }
+    }
+}

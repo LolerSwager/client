@@ -1,0 +1,88 @@
+$active-color: #AA1519;
+
+header{
+    grid-area: header;
+    border-bottom: 1px solid black;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 1rem;
+        font-size: 18px;
+        .logo{
+            width: 60px;
+            
+            a{
+                height: inherit;
+                img{
+                    height: inherit;
+                }
+            }
+        }
+        ul{
+            display: flex;
+            gap: 1.5rem;
+            li{
+                color: black;
+                list-style: none;
+                font-weight: 600;
+                flex-wrap: wrap;
+                &:hover{
+                    color: $active-color;
+                }
+                a{
+                    color: black;
+                    text-decoration: none;
+                    position: relative;
+                    &:hover{
+                        --p: 100%;
+                    }
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        width: 100%;
+                        height: 3px;
+                        background: linear-gradient($active-color 0 0) calc(100% - var(--p,0%)) / var(--p,0%) no-repeat;
+                        transition: 0.2s, background-position 0s;
+                    } 
+                }
+            }
+        }
+        .login{
+            a{
+                color: black;
+                text-decoration: none;
+                padding: 0.5rem;
+                border: 1px solid black;
+                background-color: #ffffff;
+                font-weight: 600;
+                &:hover{
+                    background-color: $active-color;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 49.5em){
+    header{
+        nav{
+            ul{
+                display: block;
+                li{
+                    margin: 1rem;
+                    a{
+                        /*
+                        &:first-child{
+                            i{
+                                display: none;
+                            } 
+                        }
+                        */
+                    }
+                }
+            }
+        }
+    }
+}
