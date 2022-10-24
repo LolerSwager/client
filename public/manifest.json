@@ -2,6 +2,10 @@
   "short_name": "LS | SDK",
   "name": "LolerSwager",
   "description": "website for Games and what ever",
+  "start_url": "/?home=true",
+  "display": "standalone",
+  "theme_color": "#AA1519",
+  "background_color": "#000000",
   "icons": [
     {
       "src": "icons/favicon.ico",
@@ -32,9 +36,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "start_url": "/?home=true",
-  "display": "standalone",
-  "theme_color": "#AA1519",
-  "background_color": "#ffffff"
+  ]
 }
