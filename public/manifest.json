@@ -6,6 +6,8 @@
   "display": "standalone",
   "theme_color": "#AA1519",
   "background_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "/app/",
   "icons": [
     {
       "src": "icons/favicon.ico",
